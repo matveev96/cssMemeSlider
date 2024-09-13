@@ -12,7 +12,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-    background-color: #A7C7E7;
+    background: no-repeat center url(./assets/wallpaper.jpg) ;
+    background-size: cover;
 }
 
 /* Header stert */
@@ -112,6 +113,10 @@ main {
     width: 25%;
 }
 
+.slide_p p {
+    margin-left: .1rem;
+}
+
 img {
     width: 100%;
     height: 100%;
@@ -128,7 +133,7 @@ input[name="r"] {
     margin-left: 1rem;
 }
 
-.nav_bar {
+.bar {
     width: 1.5rem;
     height: 1.5rem;
     display: inline-flex;
@@ -138,39 +143,42 @@ input[name="r"] {
     cursor: pointer;
 }
 
-.bar {
+.nav_bar {
     display: inline-block;
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
     cursor: pointer;
     background-color: #A7C7E7;
     border-radius: 100%;
     transition: all 0.8s ease;
 }
 
-.bar:hover {
+
+
+.bar:hover .nav_bar {
     background-color: #818589;
-    border: 2px solid #fff;
+    border: .1rem solid #fff;
 }
+
 
 /* Active button styling */
-#r1:checked ~ .text_nav .navigation .nav_bar label[for="r1"] {
-    border: 2px solid #fff;
+#r1:checked ~ .text_nav .navigation label[for="r1"] .nav_bar {
+    border: .1rem solid #fff;
     background-color: #818589;
 }
 
-#r2:checked ~ .text_nav .navigation .nav_bar label[for="r2"] {
-    border: 2px solid #fff;
+#r2:checked ~ .text_nav .navigation  label[for="r2"] .nav_bar{
+    border: .1rem solid #fff;
     background-color: #818589;
 }
 
-#r3:checked ~ .text_nav .navigation .nav_bar label[for="r3"] {
-    border: 2px solid #fff;
+#r3:checked ~ .text_nav .navigation  label[for="r3"] .nav_bar{
+    border: .1rem solid #fff;
     background-color: #818589;
 }
 
-#r4:checked ~ .text_nav .navigation .nav_bar label[for="r4"] {
-    border: 2px solid #fff;
+#r4:checked ~ .text_nav .navigation  label[for="r4"] .nav_bar{
+    border: .1rem solid #fff;
     background-color: #818589;
 }
 
@@ -206,4 +214,24 @@ input[name="r"] {
 
 #r4:checked ~ .text_nav .text .slides_p {
     margin-left: -300%;
+}
+
+@media (max-width: 810px) {
+    .slider_office {
+        width: 80vw;
+    }
+    .slider_wrapper {
+        width: 75vw;
+  
+    }
+    .text_nav {
+        flex-direction: column-reverse;
+    }
+    .text {
+        font-size: .8rem;
+    }
+    .navigation {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
 }
