@@ -217,10 +217,10 @@ input[name="r"] {
 
 @media (max-width: 810px) {
     .slider_office {
-        width: 80vw;
+        width: 45vw;
     }
     .slider_wrapper {
-       width: 75vw;
+       width: 40vw;
     }
     .text_nav {
         flex-direction: column-reverse;
@@ -234,16 +234,7 @@ input[name="r"] {
     }
 }
 
-@media (max-width: 600px) {
-    .slider_office {
-        width: 45vw;
-    }
-    .slider_wrapper {
-       width: 40vw;
-    }
-}
-
-@media (max-width: 320px) {
+@media (max-width: 400px) {
     .slider_office {
         width: 80vw;
     }
